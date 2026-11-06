@@ -4,7 +4,7 @@ import { BookOpen, ChevronRight, ChevronLeft, RotateCcw } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../utils/translations';
 import { soundEngine } from '../utils/audioSynth';
-import vintageImg from '../../assets/images/vintage_journal_letter_1793979600973.jpg';
+import vintageImg from '../assets/images/vintage_journal_letter_1793979600973.jpg';
 
 export const WordsNeverSaidSection: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
