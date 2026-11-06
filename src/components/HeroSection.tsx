@@ -4,6 +4,7 @@ import { CloudRain, HeartCrack, ChevronDown } from 'lucide-react';
 import { soundEngine } from '../utils/audioSynth';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../utils/translations';
+import heroBgImg from '../assets/images/hero_lonely_silhouette_1793979599298.jpg';
 
 interface HeroSectionProps {
   onExploreClick: () => void;
@@ -36,7 +37,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreClick }) => {
         }}
       >
         <img
-          src="/src/assets/images/hero_lonely_silhouette_1793979599298.jpg"
+          src={heroBgImg}
           alt="Lonely silhouette standing under a solitary streetlamp in the rain"
           className="w-full h-full object-cover object-center brightness-[0.82] contrast-[1.08]"
           referrerPolicy="no-referrer"
