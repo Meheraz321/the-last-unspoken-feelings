@@ -4,6 +4,7 @@ import { BookOpen, ChevronRight, ChevronLeft, RotateCcw } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../utils/translations';
 import { soundEngine } from '../utils/audioSynth';
+import vintageImg from '../../assets/images/vintage_journal_letter_1793979600973.jpg';
 
 export const WordsNeverSaidSection: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -90,7 +91,7 @@ export const WordsNeverSaidSection: React.FC = () => {
             {/* Left Column: Vintage Journal Still Life Image */}
             <div className="lg:col-span-5 relative rounded-xl overflow-hidden border border-[#27212B] group">
               <img
-                src="/src/assets/images/vintage_journal_letter_1793979600973.jpg"
+                src={vintageImg}
                 alt="Vintage open handwritten diary with fountain pen and a dried dark rose petal"
                 className="w-full h-72 sm:h-96 lg:h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 referrerPolicy="no-referrer"

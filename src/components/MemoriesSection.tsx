@@ -4,6 +4,7 @@ import { Bookmark, Clock, MessageSquare, MapPin, X, Flame, Sparkles } from 'luci
 import { soundEngine } from '../utils/audioSynth';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../utils/translations';
+import memoryRainImg from '../assets/images/faded_memory_rain_1793979600381.jpg';
 
 interface MemoryCardItem {
   id: string;
@@ -115,9 +116,9 @@ export const MemoriesSection: React.FC = () => {
         {/* Nostalgic rain photography callout strip */}
         <div className="mt-12 rounded-2xl overflow-hidden border border-[#27212B] relative h-48 sm:h-56 flex items-center justify-center p-6 text-center">
           <img
-            src="/src/assets/images/faded_memory_rain_1793979600381.jpg"
+            src={memoryRainImg}
             alt="Raindrops trickling on window pane overlooking night city bokeh"
-            className="absolute inset-0 w-full h-full object-cover brightness-50"
+            className="w-full h-full object-cover brightness-50"
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-[#08090D]/60 backdrop-blur-[2px]" />
@@ -174,16 +175,14 @@ export const MemoriesSection: React.FC = () => {
                     {activeMemory.chatTranscript.map((msg, i) => (
                       <div
                         key={i}
-                        className={`flex flex-col ${
-                          msg.sender === 'me' ? 'items-end' : 'items-start'
-                        }`}
+                        className={`flex flex-col ${msg.sender === 'me' ? 'items-end' : 'items-start'
+                          }`}
                       >
                         <div
-                          className={`max-w-[85%] rounded-2xl px-3.5 py-2 text-xs font-serif-bengali ${
-                            msg.sender === 'me'
-                              ? 'bg-[#541E2B]/80 text-[#F1EFF0] rounded-br-none'
-                              : 'bg-[#27212B]/90 text-[#D9D5D6] rounded-bl-none'
-                          }`}
+                          className={`max-w-[85%] rounded-2xl px-3.5 py-2 text-xs font-serif-bengali ${msg.sender === 'me'
+                            ? 'bg-[#541E2B]/80 text-[#F1EFF0] rounded-br-none'
+                            : 'bg-[#27212B]/90 text-[#D9D5D6] rounded-bl-none'
+                            }`}
                         >
                           <p>{msg.text}</p>
                         </div>

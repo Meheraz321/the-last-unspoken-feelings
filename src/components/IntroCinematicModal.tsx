@@ -4,6 +4,7 @@ import { Volume2, VolumeX, Sparkles, Heart, CloudRain } from 'lucide-react';
 import { soundEngine } from '../utils/audioSynth';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../utils/translations';
+import teddyImg from '../assets/images/sad_cute_teddy_bear_1793981693704.jpg';
 
 interface IntroCinematicModalProps {
   onEnter: () => void;
@@ -67,17 +68,15 @@ export const IntroCinematicModal: React.FC<IntroCinematicModalProps> = ({
         <div className="flex items-center p-0.5 rounded-full bg-[#15151C]/80 border border-[#27212B] text-xs backdrop-blur-md">
           <button
             onClick={() => setLanguage('bn')}
-            className={`px-2.5 py-1 rounded-full transition-colors cursor-pointer ${
-              language === 'bn' ? 'bg-[#541E2B] text-[#F1EFF0]' : 'text-[#85818A] hover:text-[#D9D5D6]'
-            }`}
+            className={`px-2.5 py-1 rounded-full transition-colors cursor-pointer ${language === 'bn' ? 'bg-[#541E2B] text-[#F1EFF0]' : 'text-[#85818A] hover:text-[#D9D5D6]'
+              }`}
           >
             বাংলা
           </button>
           <button
             onClick={() => setLanguage('en')}
-            className={`px-2.5 py-1 rounded-full transition-colors cursor-pointer ${
-              language === 'en' ? 'bg-[#541E2B] text-[#F1EFF0]' : 'text-[#85818A] hover:text-[#D9D5D6]'
-            }`}
+            className={`px-2.5 py-1 rounded-full transition-colors cursor-pointer ${language === 'en' ? 'bg-[#541E2B] text-[#F1EFF0]' : 'text-[#85818A] hover:text-[#D9D5D6]'
+              }`}
           >
             EN
           </button>
@@ -119,7 +118,7 @@ export const IntroCinematicModal: React.FC<IntroCinematicModalProps> = ({
           {/* Framed Image with soft vignette edge */}
           <div className="relative w-40 h-40 sm:w-52 sm:h-52 rounded-3xl overflow-hidden border border-[#541E2B]/60 shadow-2xl shadow-black/80 ring-1 ring-white/10 group-hover:border-[#9B5968] transition-all duration-500">
             <img
-              src="/src/assets/images/sad_cute_teddy_bear_1793981693704.jpg"
+              src={teddyImg}
               alt="Heartbroken cute teddy bear sitting alone in the rain holding a rose"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
@@ -145,8 +144,8 @@ export const IntroCinematicModal: React.FC<IntroCinematicModalProps> = ({
                   ? '“ও এখনো বৃষ্টির জলে ভিজতে ভিজতে অপেক্ষা করছে...”'
                   : '“He is still waiting in the cold rain...”'
                 : language === 'bn'
-                ? 'একটি নিঃসঙ্গ মন · মন খারাপের ছোট সঙ্গী'
-                : 'A heartbroken companion waiting in the rain'}
+                  ? 'একটি নিঃসঙ্গ মন · মন খারাপের ছোট সঙ্গী'
+                  : 'A heartbroken companion waiting in the rain'}
             </span>
           </motion.div>
         </motion.div>
@@ -163,11 +162,10 @@ export const IntroCinematicModal: React.FC<IntroCinematicModalProps> = ({
                   className="flex flex-col items-center"
                 >
                   <p
-                    className={`text-xl sm:text-2xl md:text-3xl font-serif-bengali tracking-wide leading-snug ${
-                      idx === 3
-                        ? 'text-[#F1EFF0] font-semibold text-glow-wine'
-                        : 'text-[#D9D5D6]/90 font-medium'
-                    }`}
+                    className={`text-xl sm:text-2xl md:text-3xl font-serif-bengali tracking-wide leading-snug ${idx === 3
+                      ? 'text-[#F1EFF0] font-semibold text-glow-wine'
+                      : 'text-[#D9D5D6]/90 font-medium'
+                      }`}
                   >
                     {lineText}
                   </p>
