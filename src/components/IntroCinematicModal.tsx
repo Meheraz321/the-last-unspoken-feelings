@@ -163,8 +163,8 @@ export const IntroCinematicModal: React.FC<IntroCinematicModalProps> = ({
                 >
                   <p
                     className={`text-xl sm:text-2xl md:text-3xl font-serif-bengali tracking-wide leading-snug ${idx === 3
-                      ? 'text-[#F1EFF0] font-semibold text-glow-wine'
-                      : 'text-[#D9D5D6]/90 font-medium'
+                        ? 'text-[#F1EFF0] font-semibold text-glow-wine'
+                        : 'text-[#D9D5D6]/90 font-medium'
                       }`}
                   >
                     {lineText}

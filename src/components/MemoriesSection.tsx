@@ -118,7 +118,7 @@ export const MemoriesSection: React.FC = () => {
           <img
             src={memoryRainImg}
             alt="Raindrops trickling on window pane overlooking night city bokeh"
-            className="w-full h-full object-cover brightness-50"
+            className="absolute inset-0 w-full h-full object-cover brightness-50"
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-[#08090D]/60 backdrop-blur-[2px]" />
@@ -180,8 +180,8 @@ export const MemoriesSection: React.FC = () => {
                       >
                         <div
                           className={`max-w-[85%] rounded-2xl px-3.5 py-2 text-xs font-serif-bengali ${msg.sender === 'me'
-                            ? 'bg-[#541E2B]/80 text-[#F1EFF0] rounded-br-none'
-                            : 'bg-[#27212B]/90 text-[#D9D5D6] rounded-bl-none'
+                              ? 'bg-[#541E2B]/80 text-[#F1EFF0] rounded-br-none'
+                              : 'bg-[#27212B]/90 text-[#D9D5D6] rounded-bl-none'
                             }`}
                         >
                           <p>{msg.text}</p>
