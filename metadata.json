@@ -1,0 +1,6 @@
+{
+  "name": "The Last Unspoken Feelings",
+  "description": "কিছু অনুভূতি কখনো শেষ হয় না... A deeply emotional, heartbreaking and cinematic interactive storytelling experience of unspoken words, midnight thoughts, and timeless memories.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
