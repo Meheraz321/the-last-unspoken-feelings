@@ -156,11 +156,10 @@ export const WordsNeverSaidSection: React.FC = () => {
                 <button
                   onClick={handlePrev}
                   disabled={currentPage === 0}
-                  className={`flex items-center gap-1.5 text-xs font-serif-bengali px-3.5 py-1.5 rounded-full border transition-all ${
-                    currentPage === 0
+                  className={`flex items-center gap-1.5 text-xs font-serif-bengali px-3.5 py-1.5 rounded-full border transition-all ${currentPage === 0
                       ? 'opacity-30 border-white/5 cursor-not-allowed text-[#85818A]'
                       : 'border-white/10 hover:border-[#9B5968] text-[#D9D5D6] hover:bg-white/5'
-                  }`}
+                    }`}
                 >
                   <ChevronLeft className="w-4 h-4" />
                   <span>{t.prevPage}</span>
@@ -173,11 +172,10 @@ export const WordsNeverSaidSection: React.FC = () => {
                 <button
                   onClick={handleNext}
                   disabled={currentPage === t.pages.length - 1}
-                  className={`flex items-center gap-1.5 text-xs font-serif-bengali px-3.5 py-1.5 rounded-full border transition-all ${
-                    currentPage === t.pages.length - 1
+                  className={`flex items-center gap-1.5 text-xs font-serif-bengali px-3.5 py-1.5 rounded-full border transition-all ${currentPage === t.pages.length - 1
                       ? 'opacity-30 border-white/5 cursor-not-allowed text-[#85818A]'
                       : 'border-white/10 hover:border-[#9B5968] text-[#D9D5D6] hover:bg-white/5'
-                  }`}
+                    }`}
                 >
                   <span>{t.nextPage}</span>
                   <ChevronRight className="w-4 h-4" />
